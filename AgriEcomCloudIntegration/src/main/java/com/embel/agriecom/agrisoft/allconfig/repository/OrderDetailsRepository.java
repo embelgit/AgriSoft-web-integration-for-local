@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import com.embel.agriecom.agrisoft.allconfig.entity.OrderDetails;
 
+/* SAGAR */
+
 public interface OrderDetailsRepository extends JpaRepository<OrderDetails, Long>
 {
 	@Query

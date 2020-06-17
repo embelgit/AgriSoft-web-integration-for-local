@@ -22,6 +22,8 @@ import org.springframework.web.client.RestTemplate;
 import com.embel.agriecom.agrisoft.allconfig.entity.OrderDetails;
 import com.embel.agriecom.agrisoft.allconfig.service.OrderDetailsService;
 
+/* SAGAR */
+
 @RestController
 public class CloudToLocalController
 {
@@ -35,7 +37,7 @@ public class CloudToLocalController
 	Long cloudPkorderIdStart = 0l;
 	Long cloudPkorderIdEnd = 0l;
 	
-	@Scheduled(initialDelay = 0, fixedRate =60000)//for testing 1 minute
+	@Scheduled(initialDelay = 0, fixedRate = 60000)//for testing 1 minute
 	//@Scheduled(initialDelay = 0, fixedRate = 300000)//5 Minutes
 	@Transactional
 	public void getCloudOrdersList()throws IOException
@@ -71,6 +73,8 @@ public class CloudToLocalController
 		}
 	}
 	
+	/* SAGAR */
+	/* update Is On Local Y On Cloud Pk Id Range after inserting records to local agrisoft */
 	public void updateIsOnLocalYOnCloudPkIdRange(Long cloudPkorderIdStart)throws IOException
 	{
 		try

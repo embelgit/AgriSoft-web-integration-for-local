@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 
 import org.springframework.stereotype.Indexed;
-
+/* SAGAR */
 @Entity
 @Table(name = "order_details")
 @TableGenerator(name="seq", initialValue=0, allocationSize = 1)

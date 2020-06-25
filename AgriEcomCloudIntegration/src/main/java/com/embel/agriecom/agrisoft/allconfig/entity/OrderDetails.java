@@ -15,12 +15,13 @@ import org.springframework.stereotype.Indexed;
 /* SAGAR */
 @Entity
 @Table(name = "order_details")
-@TableGenerator(name="seq", initialValue=0, allocationSize = 1)
+//@TableGenerator(name="seq", initialValue=0, allocationSize = 1)
 public class OrderDetails
 {	
 	@Id
 	//@GeneratedValue(strategy=GenerationType.AUTO)
-	@GeneratedValue(strategy=GenerationType.TABLE, generator="seq")
+	//@GeneratedValue(strategy=GenerationType.TABLE, generator="seq")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long pk_agris_product_id;
 	
 	@Column(name="pk_cloud_order_id")

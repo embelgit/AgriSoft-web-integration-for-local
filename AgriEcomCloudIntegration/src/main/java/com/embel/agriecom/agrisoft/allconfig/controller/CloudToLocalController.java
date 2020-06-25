@@ -37,15 +37,15 @@ public class CloudToLocalController
 	Long cloudPkorderIdStart = 0l;
 	Long cloudPkorderIdEnd = 0l;
 	
-	@Scheduled(initialDelay = 0, fixedRate = 60000)//for testing 1 minute
+	@Scheduled(initialDelay = 0, fixedRate = 250000)//for testing 1 minute
 	//@Scheduled(initialDelay = 0, fixedRate = 300000)//5 Minutes
 	@Transactional
 	public void getCloudOrdersList()throws IOException
 	{ 
 		System.out.println("scheduler called");
 		
-		final String url = "http://localhost:8080/getAllCloudOrdersForLocal";
-		//final String url = "http://agrisoft.embel.co.in/getAllCloudOrdersForLocal";
+		//final String url = "http://localhost:8080/getAllCloudOrdersForLocal";
+		final String url = "http://agrisoft.embel.co.in/getAllCloudOrdersForLocal";
 		
 		OrderDetails[] order2 = null;
 		try
@@ -86,8 +86,8 @@ public class CloudToLocalController
 			pkIdRange.add(cloudPkorderIdStart);
 			pkIdRange.add(cloudPkorderIdEnd);
 			
-			final String url = "http://localhost:8080/updateCloudIsOnLocalYUsingRange/";
-			//final String url = "http://agrisoft.embel.co.in/updateCloudIsOnLocalYUsingRange/";
+			//final String url = "http://localhost:8080/updateCloudIsOnLocalYUsingRange/";
+			final String url = "http://agrisoft.embel.co.in/updateCloudIsOnLocalYUsingRange/";
 			
 			restTemplate.postForObject(url, pkIdRange, String.class);
 		}

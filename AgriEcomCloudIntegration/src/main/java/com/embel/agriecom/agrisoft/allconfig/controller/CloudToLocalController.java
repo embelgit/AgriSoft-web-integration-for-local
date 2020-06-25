@@ -37,7 +37,7 @@ public class CloudToLocalController
 	Long cloudPkorderIdStart = 0l;
 	Long cloudPkorderIdEnd = 0l;
 	
-	@Scheduled(initialDelay = 0, fixedRate = 60000)//for testing 1 minute
+	@Scheduled(initialDelay = 0, fixedRate = 250000)//for testing 1 minute
 	//@Scheduled(initialDelay = 0, fixedRate = 300000)//5 Minutes
 	@Transactional
 	public void getCloudOrdersList()throws IOException
